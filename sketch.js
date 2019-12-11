@@ -21,7 +21,7 @@ function setup() {
   slider2.position(sliderX, sliderYdiff*2);
   slider2.style('width', sliderLength);
   
-  slider3 = createSlider(0, 1, 0.5, 0.5);  //ratio of any pendulum length to the next pendulum 
+  slider3 = createSlider(0, 1, 0.5, 0.01);  //ratio of any pendulum length to the next pendulum 
   slider3.position(sliderX, sliderYdiff*3);
   slider3.style('width', sliderLength);
   
