@@ -2,7 +2,7 @@
 //5/30/19
 
 const canvasWidth = 1440, canvasHeight = 720;         //window size
-var slider1, slider2, slider3, slider4, slider5, slider6, maxAngle=0;   //declsrstion only vaariables
+var slider1, slider2, slider3, slider4, slider5, slider6, slider7, maxAngle=0;   //declsrstion only vaariables
 var sliderX = 30, sliderYdiff = 50;                   //slider positions
 var sliderLength = '200px';                           //has to be a string, dont change to a var (KEEP THE SAME)
 var sliderLengthInt = 200;                            //Int version of sliderLength (KEEP THE SAME)
@@ -36,11 +36,15 @@ function setup() {
   slider6 = createSlider(0.1, 2, 1, 0.05);      //color correction
   slider6.position(sliderX, sliderYdiff*6);
   slider6.style('width', sliderLength);
+  
+  slider7 = createSlider(0, 1, 1, 1);      //draw mode
+  slider7.position(sliderX, sliderYdiff*6);
+  slider7.style('width', sliderLength);
 }
 
 function draw() {
   translate(canvasWidth/2, canvasHeight/2);
-  parameters = [slider1.value(),slider2.value(),slider3.value(),slider4.value(),slider5.value(), slider6.value(), maxAngle];
+  parameters = [slider1.value(),slider2.value(),slider3.value(),slider4.value(),slider5.value(), slider6.value(), slider6.value(), slider7.value(), maxAngle];
   
   if(change()){
     background(255, 255, 255, 1);
