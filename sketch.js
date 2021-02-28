@@ -37,16 +37,16 @@ function setup() {
   slider6.position(sliderX, sliderYdiff*6);
   slider6.style('width', sliderLength);
   
-  slider7 = createSlider(0, 2, 1, 0.01);      //draw mode
+  slider7 = createSlider(0, 2, 1, 0.5);      //draw mode
   slider7.position(sliderX, sliderYdiff*8);
   slider7.style('width', sliderLength);
 }
 
 function draw() {
   translate(canvasWidth/2, canvasHeight/2);
-  parameters = [slider1.value(),slider2.value(),slider3.value(),slider4.value(),slider5.value(), slider6.value(), slider6.value(), slider7.value(), maxAngle];
+  parameters = [slider1.value(),slider2.value(),slider3.value(),slider4.value(),slider5.value(), slider6.value(), slider6.value(), maxAngle];
   
-  if(change()){
+  if(change() && (slider7.value() != 0)){
     background(255, 255, 255, 1);
     testExtreeme();
     drawText();
@@ -58,9 +58,7 @@ function draw() {
 function change(){
   for(i=0;i<parameters.length;i++){
     if(lastParameters[i] != parameters[i]){
-      for(n=0; n<parameters.length; n++){
-        lastParameters[n] = parameters[n];
-      }
+      lastParameters[n] = parameters[n];
       return true;
     }
   }
