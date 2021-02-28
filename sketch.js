@@ -38,8 +38,8 @@ function setup() {
   slider6.style('width', sliderLength);
   
   slider7 = createSlider(0, 2, 1, 0.01);      //draw mode
-//  slider7.position(sliderX, sliderYdiff*8);
-//  slider7.style('width', sliderLength);
+  slider7.position(sliderX, sliderYdiff*8);
+  slider7.style('width', sliderLength);
 }
 
 function draw() {
