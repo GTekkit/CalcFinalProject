@@ -46,7 +46,7 @@ function draw() {
   translate(canvasWidth/2, canvasHeight/2);
   parameters = [slider1.value(),slider2.value(),slider3.value(),slider4.value(),slider5.value(), slider6.value(), slider6.value(), maxAngle];
   
-  if(change() && (slider7.value() != 0)){
+  if(change() && (slider7.value() !== 0)){
     background(255, 255, 255, 1);
     testExtreeme();
     drawText();
@@ -57,7 +57,7 @@ function draw() {
 
 function change(){
   for(i=0;i<parameters.length;i++){
-    if(lastParameters[i] != parameters[i]){
+    if(lastParameters[i] !== parameters[i]){
       lastParameters[n] = parameters[n];
       return true;
     }
