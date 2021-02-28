@@ -37,7 +37,7 @@ function setup() {
   slider6.position(sliderX, sliderYdiff*6);
   slider6.style('width', sliderLength);
   
-  slider7 = createSlider(0, 1, 1, 1);      //draw mode
+  slider7 = createSlider(0, 2, 1, 1);      //draw mode
   slider7.position(sliderX, sliderYdiff*8);
   slider7.style('width', sliderLength);
 }
